@@ -2,19 +2,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package view;
+package Views;
 
-import domainmodel.DanhMuc;
-import domainmodel.SanPham;
+import DomainModels.DanhMuc;
+import DomainModels.SanPham;
 import java.util.List;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import service.DanhMucService;
-import service.SanPhamService;
-import service.impl.DanhMucServiceImpl;
-import service.impl.SanPhamServiceImpl;
-import viewmodel.SanPhamResponse;
+import Services.DanhMucService;
+import Services.SanPhamService;
+import Services.DanhMucServiceImpl;
+import Services.SanPhamServiceImpl;
+import ViewModels.SanPhamResponse;
 
 /**
  *

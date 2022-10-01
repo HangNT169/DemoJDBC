@@ -2,17 +2,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package repository;
+package Services;
 
-import domainmodel.DanhMuc;
+import DomainModels.DanhMuc;
 import java.util.List;
 
 /**
  *
  * @author hangnt
  */
-public interface DanhMucRepository {
+public interface DanhMucService {
 
-    List<DanhMuc> getAll();
+    List<DanhMuc> getAllDanhMuc();
 
 }

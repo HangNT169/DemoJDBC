@@ -2,14 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package service.impl;
+package Services;
 
-import domainmodel.SanPham;
+import DomainModels.SanPham;
 import java.util.List;
-import repository.SanPhamRepository;
-import repository.impl.SanPhamRepositoryImpl;
-import service.SanPhamService;
-import viewmodel.SanPhamResponse;
+import Repositories.SanPhamRepository;
+import Repositories.impl.SanPhamRepositoryImpl;
+import Services.SanPhamService;
+import ViewModels.SanPhamResponse;
 
 /**
  *
