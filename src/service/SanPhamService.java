@@ -4,7 +4,7 @@
  */
 package service;
 
-import model.SanPham;
+import domainmodel.SanPham;
 import java.util.List;
 import viewmodel.SanPhamResponse;
 

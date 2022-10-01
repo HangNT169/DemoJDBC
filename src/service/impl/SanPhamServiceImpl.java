@@ -4,7 +4,7 @@
  */
 package service.impl;
 
-import model.SanPham;
+import domainmodel.SanPham;
 import java.util.List;
 import repository.SanPhamRepository;
 import repository.impl.SanPhamRepositoryImpl;

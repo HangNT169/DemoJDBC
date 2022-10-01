@@ -4,7 +4,7 @@
  */
 package repository.impl;
 
-import model.SanPham;
+import domainmodel.SanPham;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -12,7 +12,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import repository.SanPhamRepository;
-import repository.DBConnection;
+import util.DBConnection;
 import viewmodel.SanPhamResponse;
 
 /**

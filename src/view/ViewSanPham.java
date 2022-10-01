@@ -4,8 +4,8 @@
  */
 package view;
 
-import model.DanhMuc;
-import model.SanPham;
+import domainmodel.DanhMuc;
+import domainmodel.SanPham;
 import java.util.List;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
