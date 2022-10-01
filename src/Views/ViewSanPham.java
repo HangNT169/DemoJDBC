@@ -23,11 +23,11 @@ import ViewModels.SanPhamResponse;
 public class ViewSanPham extends javax.swing.JFrame {
     
     private List<SanPhamResponse> listSanPham;
-    private List<DanhMuc> listDanhMuc;
-    private DefaultTableModel dtm;
-    private DefaultComboBoxModel dcbm;
-    private DanhMucService danhMucService;
-    private SanPhamService sanPhamService;
+    private final List<DanhMuc> listDanhMuc;
+    private final DefaultTableModel dtm;
+    private final DefaultComboBoxModel dcbm;
+    private final DanhMucService danhMucService;
+    private final SanPhamService sanPhamService;
 
     /**
      * Creates new form ViewSanPham
