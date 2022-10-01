@@ -4,7 +4,7 @@
  */
 package repository.impl;
 
-import domainmodel.DanhMuc;
+import model.DanhMuc;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -12,7 +12,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import repository.DanhMucRepository;
-import util.DBConnection;
+import repository.DBConnection;
 
 /**
  *

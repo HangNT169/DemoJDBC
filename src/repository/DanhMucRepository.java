@@ -4,7 +4,7 @@
  */
 package repository;
 
-import domainmodel.DanhMuc;
+import model.DanhMuc;
 import java.util.List;
 
 /**

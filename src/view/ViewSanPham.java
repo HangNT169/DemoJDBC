@@ -4,8 +4,8 @@
  */
 package view;
 
-import domainmodel.DanhMuc;
-import domainmodel.SanPham;
+import model.DanhMuc;
+import model.SanPham;
 import java.util.List;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
@@ -290,6 +290,7 @@ public class ViewSanPham extends javax.swing.JFrame {
                 Double.valueOf(giaBan), mieuTa);
         return sanPham;
     }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSua;
     private javax.swing.JButton btnThem;

@@ -11,6 +11,7 @@ import view.ViewSanPham;
  * @author hangnt
  */
 public class Application {
+
     public static void main(String[] args) {
         new ViewSanPham().setVisible(true);
     }
