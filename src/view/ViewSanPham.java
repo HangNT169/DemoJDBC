@@ -21,7 +21,7 @@ import viewmodel.SanPhamResponse;
  * @author hangnt
  */
 public class ViewSanPham extends javax.swing.JFrame {
-
+    
     private List<SanPhamResponse> listSanPham;
     private List<DanhMuc> listDanhMuc;
     private DefaultTableModel dtm;
@@ -124,6 +124,11 @@ public class ViewSanPham extends javax.swing.JFrame {
                 "Tên sản phẩm", "Tên danh mục", "Số lượng", "Giá nhập", "Giá bán", "Miêu tả"
             }
         ));
+        tbHienThi.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tbHienThiMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tbHienThi);
 
         jLabel7.setText("Miêu tả");
@@ -248,19 +253,30 @@ public class ViewSanPham extends javax.swing.JFrame {
         showDataTable(listSanPham);
     }//GEN-LAST:event_btnXoaActionPerformed
 
+    private void tbHienThiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbHienThiMouseClicked
+        int row = tbHienThi.getSelectedRow();
+        SanPhamResponse sanPham = listSanPham.get(row);
+        txtTenSanPham.setText(sanPham.getTenSanPham());
+        txtGiaBan.setText(String.valueOf(sanPham.getGiaBan()));
+        txtGiaNhap.setText(String.valueOf(sanPham.getGiaNhap()));
+        txtMieuTa.setText(sanPham.getMieuTa());
+        txtSoLuong.setText(String.valueOf(sanPham.getSoLuong()));
+        cbbDanhMuc.setSelectedItem(sanPham.getTenDanhMuc());
+    }//GEN-LAST:event_tbHienThiMouseClicked
+    
     private void showDataTable(List<SanPhamResponse> lists) {
         dtm.setRowCount(0);
         for (SanPhamResponse sp : lists) {
             dtm.addRow(sp.toDataRow());
         }
     }
-
+    
     private void showDataCombobox(List<DanhMuc> lists) {
         for (DanhMuc dm : lists) {
             dcbm.addElement(dm.getTenDanhMuc());
         }
     }
-
+    
     private SanPham getSanPhamTuForm() {
         String tenSanPham = txtTenSanPham.getText();
         String soLuong = txtSoLuong.getText();
