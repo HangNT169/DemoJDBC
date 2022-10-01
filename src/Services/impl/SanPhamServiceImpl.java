@@ -6,8 +6,8 @@ package Services;
 
 import DomainModels.SanPham;
 import java.util.List;
-import Repositories.SanPhamRepository;
-import Repositories.impl.SanPhamRepositoryImpl;
+import Responsitories.SanPhamRepository;
+import Responsitories.impl.SanPhamRepositoryImpl;
 import Services.SanPhamService;
 import ViewModels.SanPhamResponse;
 

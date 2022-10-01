@@ -6,8 +6,8 @@ package Services;
 
 import DomainModels.DanhMuc;
 import java.util.List;
-import Repositories.DanhMucRepository;
-import Repositories.impl.DanhMucRepositoryImpl;
+import Responsitories.DanhMucRepository;
+import Responsitories.impl.DanhMucRepositoryImpl;
 import Services.DanhMucService;
 
 /**
