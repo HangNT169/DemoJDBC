@@ -12,7 +12,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import repository.SanPhamRepository;
-import util.DBContext;
+import util.DBConnection;
 import viewmodel.SanPhamResponse;
 
 /**
@@ -29,7 +29,7 @@ public class SanPhamRepositoryImpl implements SanPhamRepository {
                        FROM san_pham sp INNER JOIN
                        danh_muc dm ON sp.danh_muc_id  = dm.id  
                        """;
-        try (Connection con = DBContext.getConnection();
+        try (Connection con = DBConnection.getConnection();
                 PreparedStatement ps = con.prepareStatement(query);) {
             ResultSet rs = ps.executeQuery();
             List<SanPhamResponse> listSanPhams = new ArrayList<>();
@@ -54,7 +54,7 @@ public class SanPhamRepositoryImpl implements SanPhamRepository {
                        FROM WS_FA22_BL1.dbo.san_pham
                        WHERE id = ?
                        """;
-        try (Connection con = DBContext.getConnection();
+        try (Connection con = DBConnection.getConnection();
                 PreparedStatement ps = con.prepareStatement(query);) {
             ps.setObject(1, id);
             ResultSet rs = ps.executeQuery();
@@ -79,7 +79,7 @@ public class SanPhamRepositoryImpl implements SanPhamRepository {
                     VALUES(?,?,?,?,?,?);
                     """;
 
-        try (Connection con = DBContext.getConnection();
+        try (Connection con = DBConnection.getConnection();
                 PreparedStatement ps = con.prepareStatement(sql);) {
             ps.setObject(1, sanPham.getDanhMucID());
             ps.setObject(2, sanPham.getTenSanPham());
@@ -102,7 +102,7 @@ public class SanPhamRepositoryImpl implements SanPhamRepository {
                     WHERE id=?;
                     """;
 
-        try (Connection con = DBContext.getConnection();
+        try (Connection con = DBConnection.getConnection();
                 PreparedStatement ps = con.prepareStatement(sql);) {
             ps.setObject(1, id);
             check = ps.executeUpdate();
@@ -122,7 +122,7 @@ public class SanPhamRepositoryImpl implements SanPhamRepository {
                     WHERE id=?;
                     """;
 
-        try (Connection con = DBContext.getConnection();
+        try (Connection con = DBConnection.getConnection();
                 PreparedStatement ps = con.prepareStatement(sql);) {
             ps.setObject(1, sanPham.getDanhMucID());
             ps.setObject(2, sanPham.getTenSanPham());

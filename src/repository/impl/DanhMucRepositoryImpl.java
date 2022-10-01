@@ -12,7 +12,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import repository.DanhMucRepository;
-import util.DBContext;
+import util.DBConnection;
 
 /**
  *
@@ -26,7 +26,7 @@ public class DanhMucRepositoryImpl implements DanhMucRepository {
                        SELECT id, ten_danh_muc
                        FROM WS_FA22_BL1.dbo.danh_muc;
                        """;
-        try (Connection con = DBContext.getConnection();
+        try (Connection con = DBConnection.getConnection();
                 PreparedStatement ps = con.prepareStatement(query);) {
             ResultSet rs = ps.executeQuery();
             List<DanhMuc> listDanhMucs = new ArrayList<>();

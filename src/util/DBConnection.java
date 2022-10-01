@@ -12,7 +12,7 @@ import java.sql.SQLException;
  *
  * @author hangnt
  */
-public class DBContext {
+public class DBConnection {
 
     public static final String HOSTNAME = "localhost";
     public static final String PORT = "1433";
