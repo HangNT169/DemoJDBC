@@ -98,7 +98,7 @@ public class SanPhamRepositoryImpl implements SanPhamRepository {
     public boolean delete(String id) {
         int check = 0;
         String sql = """
-                  DELETE FROM WS_FA22_BL1.dbo.san_pham
+                    DELETE FROM WS_FA22_BL1.dbo.san_pham
                     WHERE id=?;
                     """;
 

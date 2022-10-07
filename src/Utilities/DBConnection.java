@@ -16,7 +16,7 @@ public class DBConnection {
 
     public static final String HOSTNAME = "localhost";
     public static final String PORT = "1433";
-    public static final String DBNAME = "WS_FA22_BL1";
+    public static final String DBNAME = "FINALASS_FPTShop_SP22_BL2_DUNGNA29";
     public static final String USERNAME = "sa";
     public static final String PASSWORD = "Password.1";
 
